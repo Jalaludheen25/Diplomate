@@ -33,19 +33,12 @@ function toggleMobileAccordion(id) {
  * Sticky Navbar on Scroll
  */
 function initNavbar() {
+    // Header is now constant as per user request. 
+    // Scroll effects (shadow, padding, background change) have been disabled.
     const navbar = document.getElementById('navbar');
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('shadow-lg', 'scrolled');
-            navbar.classList.add('py-2');
-            navbar.classList.remove('py-4');
-        } else {
-            navbar.classList.remove('shadow-lg', 'scrolled');
-            navbar.classList.remove('py-2');
-            navbar.classList.add('py-4');
-        }
-    });
+    if (navbar) {
+        navbar.classList.add('py-4'); // Ensure initial padding is set
+    }
 }
 
 /**

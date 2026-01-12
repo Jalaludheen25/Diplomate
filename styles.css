@@ -934,11 +934,14 @@ input:focus {
     opacity: 0.9;
 }
 
+/* nav.scrolled disabled for constant header */
+/*
 nav.scrolled {
     height: 4rem !important;
     background-color: var(--diplomat-blue) !important;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
 }
+*/
 
 .glass {
     background-color: rgba(255, 255, 255, 0.1);
