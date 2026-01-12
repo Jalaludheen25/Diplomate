@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn-gold {
+        @apply bg-gold-500 text-black font-bold py-3 px-6 rounded-md transition-all duration-300 hover:bg-opacity-90 active:scale-95;
+    }
+
+    .btn-outline-indigo {
+        @apply border-2 border-indigo-700 text-indigo-700 font-semibold py-3 px-6 rounded-md transition-all duration-300 hover:bg-indigo-700 hover:text-white active:scale-95;
+    }
+
+    .nav-link {
+        @apply text-gray-700 hover:text-indigo-700 font-medium transition-colors duration-200;
+    }
+
+    .btn-indigo-small {
+        @apply bg-indigo-700 text-white text-xs font-bold py-2 px-4 rounded transition-all hover:bg-opacity-90;
+    }
+
+    nav.scrolled {
+        @apply h-16 bg-white shadow-md;
+    }
+
+    .glass {
+        @apply bg-white/10 backdrop-blur-md border border-white/10;
+    }
+
+    .glass-dark {
+        @apply bg-navy-900/80 backdrop-blur-md border border-white/5;
+    }
+}
+
+/* Custom Styles from styles.css */
+.blend-overlay {
+    mix-blend-mode: overlay;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4338ca;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #312e81;
+}
+
+input:focus {
+    box-shadow: 0 0 0 4px rgba(67, 56, 202, 0.1);
+}

@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Process | Diplomate Dubai</title>
+    <meta name="description"
+        content="A step-by-step guide to the UAE business registration process, from trade name reservation to final license issuance.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 900: '#0f172a' },
+                        indigo: { 700: '#4338ca' },
+                        gold: { 500: '#d4af37' },
+                        lightblue: { 200: '#bfdbfe' },
+                        offwhite: { 50: '#f9fafb' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-white font-sans text-gray-900">
+    <!-- Navbar (Standardized) -->
+    <nav id="navbar"
+        class="fixed top-0 w-full z-50 transition-all duration-300 bg-[#1a5492] shadow-md ">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html">
+                        <img src="assets/images/logo/logo.png" alt="Diplomat Documents Services"
+                            class="h-16 w-auto ">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-6 h-full">
+                    <a href="index.html"
+                        class="text-gray-700 hover:text-indigo-700 h-full flex items-center border-b-2 border-transparent hover:border-gold-500 transition-all font-medium">Home</a>
+
+                    <div class="group h-full flex items-center">
+                        <button
+                            class="text-white hover:text-gold-500 h-full flex items-center border-b-2 border-transparent group-hover:border-gold-500 transition-all font-medium">
+                            Business Setup
+                            <svg class="ml-1 w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <!-- Mega Menu -->
+                        <div
+                            class="absolute top-20 left-0 w-full bg-white shadow-2xl border-t border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+                            <div class="max-w-7xl mx-auto px-8 py-12 grid grid-cols-12 gap-12">
+                                <div class="col-span-3 bg-offwhite-50 p-8 rounded-2xl">
+                                    <h3 class="text-navy-900 font-bold text-xl mb-4">Hey, we're Diplomate</h3>
+                                    <p class="text-gray-500 text-sm mb-6">UAE business setup experts, dedicated to your
+                                        legacy.</p>
+                                    <a href="freezone-setup.html" class="btn-indigo-small">Explore All Solutions</a>
+                                </div>
+                                <div class="col-span-4">
+                                    <h4 class="text-indigo-700 font-bold text-sm uppercase mb-6">Free Zones</h4>
+                                    <ul class="space-y-4">
+                                        <li><a href="freezone-setup.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium">Overview</a>
+                                        </li>
+                                        <li><a href="freezone-activities.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium">Business
+                                                Activities</a></li>
+                                        <li><a href="pricing-locations.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium">Locations &
+                                                Pricing</a></li>
+                                        <li><a href="visa-services.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium">UAE Residence
+                                                Visa</a></li>
+                                        <li><a href="registration-process.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium">Registration
+                                                Process</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-span-4">
+                                    <h4 class="text-indigo-700 font-bold text-sm uppercase mb-6">Mainland</h4>
+                                    <ul class="space-y-4">
+                                        <li><a href="mainland-setup.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium">Overview</a>
+                                        </li>
+                                        <li><a href="sponsorship-solutions.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium">Sponsorship
+                                                Solutions</a></li>
+                                        <li><a href="mainland-license.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium">Dubai Mainland
+                                                License</a></li>
+                                        <li><a href="mainland-activities.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium">Mainland
+                                                Activities</a></li>
+                                        <li><a href="visa-services.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium">Mainland
+                                                Visas</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group h-full flex items-center">
+                        <a href="services.html"
+                            class="text-white hover:text-gold-500 h-full flex items-center border-b-2 border-transparent group-hover:border-gold-500 transition-all font-medium">
+                            Services
+                            <svg class="ml-1 w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <div
+                            class="absolute top-20 left-0 w-full bg-white shadow-2xl border-t border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="max-w-7xl mx-auto px-8 py-12 grid grid-cols-3 gap-12">
+                                <div>
+                                    <h4 class="text-indigo-700 font-bold text-sm uppercase mb-6">Essential Services</h4>
+                                    <ul class="space-y-4 text-sm">
+                                        <li><a href="bank-account-opening.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Bank
+                                                Account
+                                                Opening</a></li>
+                                        <li><a href="accounting-tax.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Accounting
+                                                &
+                                                VAT</a></li>
+                                        <li><a href="compliance-services.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Compliance
+                                                Services</a></li>
+                                        <li><a href="payroll-management.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Payroll
+                                                Management</a></li>
+                                        <li><a href="health-insurance.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Health
+                                                Insurance</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-indigo-700 font-bold text-sm uppercase mb-6">Support Services</h4>
+                                    <ul class="space-y-4 text-sm">
+                                        <li><a href="golden-visa.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Golden
+                                                Visa
+                                                UAE</a></li>
+                                        <li><a href="pro-services.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">PRO
+                                                Services</a>
+                                        </li>
+                                        <li><a href="will-preparation.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Will
+                                                Preparation</a></li>
+                                        <li><a href="trademark-registration.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Trademark
+                                                Registration</a></li>
+                                        <li><a href="tourist-visa.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Tourist
+                                                Visa</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-indigo-700 font-bold text-sm uppercase mb-6">Operational</h4>
+                                    <ul class="space-y-4 text-sm">
+                                        <li><a href="it-support.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">IT
+                                                Support</a></li>
+                                        <li><a href="legal-support.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Legal
+                                                Support</a></li>
+                                        <li><a href="mail-management.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Mail
+                                                Management</a></li>
+                                        <li><a href="virtual-receptionist.html"
+                                                class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Virtual
+                                                Receptionist</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group h-full flex items-center relative">
+                        <button
+                            class="text-white hover:text-gold-500 h-full flex items-center border-b-2 border-transparent group-hover:border-gold-500 transition-all font-medium">
+                            About Us
+                            <svg class="ml-1 w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute top-20 left-0 w-64 bg-white shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 rounded-b-xl">
+                            <ul class="py-4">
+                                <li><a href="about.html"
+                                        class="px-6 py-3 text-gray-600 hover:bg-offwhite-50 hover:text-indigo-700 block font-medium">Our
+                                        Story</a></li>
+                                <li><a href="team.html"
+                                        class="px-6 py-3 text-gray-600 hover:bg-offwhite-50 hover:text-indigo-700 block font-medium">The
+                                        Diplomate Team</a></li>
+                                <li><a href="success-stories.html"
+                                        class="px-6 py-3 text-gray-600 hover:bg-offwhite-50 hover:text-indigo-700 block font-medium">Success
+                                        Stories</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="group h-full flex items-center relative">
+                        <button
+                            class="text-white hover:text-gold-500 h-full flex items-center border-b-2 border-transparent group-hover:border-gold-500 transition-all font-medium">
+                            Contacts
+                            <svg class="ml-1 w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute top-20 left-0 w-64 bg-white shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 rounded-b-xl">
+                            <ul class="py-4">
+                                <li><a href="contact.html"
+                                        class="px-6 py-3 text-gray-600 hover:bg-offwhite-50 hover:text-indigo-700 block font-medium">Contact
+                                        Us</a></li>
+                                <li><a href="office-locations.html"
+                                        class="px-6 py-3 text-gray-600 hover:bg-offwhite-50 hover:text-indigo-700 block font-medium">Office
+                                        Locations</a></li>
+                                <li><a href="request-call.html"
+                                        class="px-6 py-3 text-gray-600 hover:bg-offwhite-50 hover:text-indigo-700 block font-medium">Request
+                                        a Call</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop Buttons -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="https://wa.me/971508878699" target="_blank"
+                        class="border-2 border-white text-white py-2 px-6 text-xs font-bold uppercase tracking-wider rounded-full hover:bg-white hover:text-[#1a5492] transition-all">WhatsApp
+                        Us</a>
+                    <a href="index.html#calculator"
+                        class="bg-gold-500 text-navy-900 font-bold py-2 px-6 rounded-full shadow-lg hover:bg-white transition-all text-xs uppercase tracking-wider">License
+                        Calculator</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white p-2 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Slide-in) -->
+        <div id="mobile-menu"
+            class="fixed inset-y-0 right-0 w-80 bg-[#1a5492] shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 lg:hidden overflow-y-auto">
+            <div class="p-6 flex flex-col h-full">
+                <div class="flex justify-between items-center mb-8">
+                    <a href="index.html">
+                        <img src="assets/images/logo/logo.png" alt="Diplomat Documents Services"
+                            class="h-12 w-auto ">
+                    </a>
+                    <button id="close-menu-btn" class="text-white/70 hover:text-white">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <nav class="flex flex-col space-y-2">
+                    <a href="index.html"
+                        class="py-3 px-4 text-lg font-semibold text-navy-900 border-b border-gray-50">Home</a>
+
+                    <!-- Mobile Business Setup Accordion -->
+                    <div class="mobile-accordion">
+                        <button
+                            class="w-full flex justify-between items-center py-3 px-4 text-lg font-semibold text-navy-900 border-b border-gray-50"
+                            onclick="toggleMobileAccordion('setup-content')">
+                            Business Setup
+                            <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div id="setup-content" class="hidden bg-offwhite-50 px-4 py-2">
+                            <h5 class="text-indigo-700 font-bold text-xs uppercase mt-4 mb-2">Free Zones</h5>
+                            <a href="freezone-setup.html" class="block py-2 text-gray-600">Overview</a>
+                            <a href="freezone-activities.html" class="block py-2 text-gray-600">Business Activities</a>
+                            <a href="pricing-locations.html" class="block py-2 text-gray-600">Pricing &
+                                Locations</a>
+                            <a href="registration-process.html" class="block py-2 text-gray-600">Registration
+                                Process</a>
+                            <h5 class="text-indigo-700 font-bold text-xs uppercase mt-4 mb-2">Mainland</h5>
+                            <a href="mainland-setup.html" class="block py-2 text-gray-600">Overview</a>
+                            <a href="sponsorship-solutions.html" class="block py-2 text-gray-600">Sponsorship</a>
+                            <a href="mainland-license.html" class="block py-2 text-gray-600">Mainland License</a>
+                            <a href="mainland-activities.html" class="block py-2 text-gray-600">Mainland Activities</a>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Services Accordion -->
+                    <div class="mobile-accordion">
+                        <button
+                            class="w-full flex justify-between items-center py-3 px-4 text-lg font-semibold text-white "
+                            onclick="toggleMobileAccordion('services-content')">
+                            Services
+                            <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div id="services-content" class="hidden bg-offwhite-50 px-4 py-2">
+                            <a href="services.html" class="block py-2 text-indigo-700 font-bold">View All Services</a>
+                            <a href="accounting-tax.html" class="block py-2 text-gray-600">Accounting & Tax</a>
+                            <a href="visa-services.html" class="block py-2 text-gray-600">Visa Services</a>
+                            <a href="compliance-services.html" class="block py-2 text-gray-600">Compliance Services</a>
+                            <a href="payroll-management.html" class="block py-2 text-gray-600">Payroll Management</a>
+                            <a href="will-preparation.html" class="block py-2 text-gray-600">Will Preparation</a>
+                            <a href="trademark-registration.html" class="block py-2 text-gray-600">Trademark
+                                Registration</a>
+                            <a href="it-legal-support.html" class="block py-2 text-gray-600">IT & Legal Support</a>
+                            <a href="mail-management.html" class="block py-2 text-gray-600">Mail Management</a>
+                            <a href="virtual-receptionist.html" class="block py-2 text-gray-600">Virtual
+                                Receptionist</a>
+                        </div>
+                    </div>
+
+                    <div class="mobile-accordion">
+                        <button
+                            class="w-full flex justify-between items-center py-3 px-4 text-lg font-semibold text-white "
+                            onclick="toggleMobileAccordion('about-content')">
+                            About Us
+                            <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div id="about-content" class="hidden bg-offwhite-50 px-4 py-2">
+                            <a href="about.html" class="block py-2 text-gray-600">Our Story</a>
+                            <a href="team.html" class="block py-2 text-gray-600">Leadership Team</a>
+                            <a href="success-stories.html" class="block py-2 text-gray-600">Success Stories</a>
+                        </div>
+                    </div>
+
+                    <div class="mobile-accordion">
+                        <button
+                            class="w-full flex justify-between items-center py-3 px-4 text-lg font-semibold text-white "
+                            onclick="toggleMobileAccordion('contact-content')">
+                            Contacts
+                            <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div id="contact-content" class="hidden bg-offwhite-50 px-4 py-2">
+                            <a href="contact.html" class="block py-2 text-gray-600">Contact Us</a>
+                            <a href="office-locations.html" class="block py-2 text-gray-600">Office Locations</a>
+                            <a href="request-call.html" class="block py-2 text-gray-600">Request a call</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="mt-8 pt-8 border-t border-gray-100 space-y-4">
+                    <a href="https://wa.me/971508878699" target="_blank"
+                        class="block w-full text-center py-3 px-4 rounded-lg border-2 border-indigo-700 text-indigo-700 font-bold">WhatsApp
+                        Us</a>
+                    <a href="index.html#calculator"
+                        class="block w-full text-center py-3 px-4 rounded-lg bg-red-500 text-white font-bold shadow-lg">License
+                        Calculator</a>
+                </div>
+            </div>
+        </div>
+        <!-- Overlay -->
+        <div id="menu-overlay"
+            class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 z-40 md:hidden">
+        </div>
+    </nav>
+
+    <!-- Navbar script for mobile -->
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2', 'shadow-lg');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2', 'shadow-lg');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+
+        function openMenu() {
+            mobileMenu.classList.remove('translate-x-full');
+            menuOverlay.classList.remove('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.add('translate-x-full');
+            menuOverlay.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuBtn?.addEventListener('click', openMenu);
+        closeMenuBtn?.addEventListener('click', closeMenu);
+        menuOverlay?.addEventListener('click', closeMenu);
+
+        // Mobile accordion toggle
+        function toggleMobileAccordion(id) {
+            const content = document.getElementById(id);
+            const button = content?.previousElementSibling;
+            const svg = button?.querySelector('svg');
+
+            // Close other accordions
+            document.querySelectorAll('[id$="-content"]').forEach(el => {
+                if (el.id !== id && !el.classList.contains('hidden')) {
+                    el.classList.add('hidden');
+                    el.previousElementSibling?.querySelector('svg')?.classList.remove('rotate-180');
+                }
+            });
+
+            content?.classList.toggle('hidden');
+            svg?.classList.toggle('rotate-180');
+        }
+    </script>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-navy-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-navy-900 to-transparent"></div>
+            <img class="absolute inset-0 w-full h-full object-cover blend-overlay"
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=2070"
+                alt="Registration Process">
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span
+                        class="inline-block px-4 py-1 rounded-full bg-indigo-700/30 text-indigo-200 text-sm font-semibold mb-6 border border-indigo-500/30">Operational
+                        Clarity</span>
+                    <h1 class="text-4xl md:text-6xl font-heading font-bold mb-6">Registration <br><span
+                            class="text-gold-500">Process</span></h1>
+                    <p class="text-xl text-gray-300 mb-8">From concept to license in as little as 3-5 business days.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#inquiry"
+                            class="bg-gold-500 text-navy-900 font-bold py-3 px-8 rounded-full hover:bg-white transition-all">Get
+                            Started</a>
+                        <a href="tel:+97143262732"
+                            class="border-2 border-white text-white py-3 px-8 rounded-full hover:bg-white hover:text-navy-900 transition-all">Call
+                            Us</a>
+                    </div>
+                </div>
+                <div class="hidden lg:block">
+                    <div class="image-card-gold rounded-3xl overflow-hidden hero-image-shadow">
+                        <img src="assets/images/registration-process-hero.png" class="w-full h-80 object-cover"
+                            alt="UAE Business Registration">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="space-y-12">
+                <div class="flex gap-8">
+                    <div class="text-5xl font-heading font-bold text-gold-500 opacity-30">01</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-navy-900 mb-4">Initial Approval & Trade Name</h3>
+                        <p class="text-gray-600">Reserve your unique company name and receive initial approval from the
+                            relevant authority (DED or Free Zone).</p>
+                    </div>
+                </div>
+                <div class="flex gap-8">
+                    <div class="text-5xl font-heading font-bold text-gold-500 opacity-30">02</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-navy-900 mb-4">MOA & Lease Agreement</h3>
+                        <p class="text-gray-600">Draft your Memorandum of Association and secure a physical or virtual
+                            office lease as required by the jurisdiction.</p>
+                    </div>
+                </div>
+                <div class="flex gap-8">
+                    <div class="text-5xl font-heading font-bold text-gold-500 opacity-30">03</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-navy-900 mb-4">License Issuance</h3>
+                        <p class="text-gray-600">Submit final documentation and pay registration fees to receive your
+                            official Dubai Business License.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Why Choose Us -->
+    <section class="py-24 section-bg-navy text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-white mb-4">Why Choose Diplomate</h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">Experience excellence with our proven track record
+                    and dedicated professional team.</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-gold-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">10+ Years Experience</h3>
+                    <p class="text-gray-400">Trusted expertise serving businesses across the UAE and beyond.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-gold-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
+                                stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Expert Team</h3>
+                    <p class="text-gray-400">Certified professionals with deep UAE regulatory knowledge.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-gold-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Fast Processing</h3>
+                    <p class="text-gray-400">Quick turnaround times with efficient processing systems.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-gold-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">24/7 Support</h3>
+                    <p class="text-gray-400">Round-the-clock assistance for all your business needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Steps -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-navy-900 mb-4">Our Simple Process</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">A streamlined approach to get you started quickly and
+                    efficiently.</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8 relative">
+                <!-- Connecting Line -->
+                <div
+                    class="hidden md:block absolute top-12 left-[12%] right-[12%] h-1 bg-gradient-to-r from-indigo-200 via-purple-200 to-gold-500 rounded-full">
+                </div>
+
+                <div class="journey-step rounded-3xl p-8 text-center relative z-10">
+                    <div
+                        class="step-number w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl text-white">
+                        <span class="text-3xl font-bold">01</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Initial Consultation</h3>
+                    <p class="text-gray-500 text-sm">Free consultation to understand your requirements and goals.</p>
+                </div>
+
+                <div class="journey-step rounded-3xl p-8 text-center relative z-10">
+                    <div
+                        class="step-number w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl text-white">
+                        <span class="text-3xl font-bold">02</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Document Collection</h3>
+                    <p class="text-gray-500 text-sm">We guide you through the required documentation.</p>
+                </div>
+
+                <div class="journey-step rounded-3xl p-8 text-center relative z-10">
+                    <div
+                        class="step-number w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl text-white">
+                        <span class="text-3xl font-bold">03</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Processing</h3>
+                    <p class="text-gray-500 text-sm">Our experts handle all government interactions.</p>
+                </div>
+
+                <div class="journey-step rounded-3xl p-8 text-center relative z-10">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-gold-500 to-amber-400 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl text-navy-900">
+                        <span class="text-3xl font-bold">04</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Completion</h3>
+                    <p class="text-gray-500 text-sm">Receive your documents and start your journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-24 section-bg-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 text-center">
+                <div>
+                    <p class="text-5xl md:text-6xl font-heading font-bold text-gold-500 mb-2">5000+</p>
+                    <p class="text-gray-400 uppercase tracking-widest text-sm">Companies Formed</p>
+                </div>
+                <div>
+                    <p class="text-5xl md:text-6xl font-heading font-bold text-gold-500 mb-2">10+</p>
+                    <p class="text-gray-400 uppercase tracking-widest text-sm">Years Experience</p>
+                </div>
+                <div>
+                    <p class="text-5xl md:text-6xl font-heading font-bold text-gold-500 mb-2">98%</p>
+                    <p class="text-gray-400 uppercase tracking-widest text-sm">Client Satisfaction</p>
+                </div>
+                <div>
+                    <p class="text-5xl md:text-6xl font-heading font-bold text-gold-500 mb-2">50+</p>
+                    <p class="text-gray-400 uppercase tracking-widest text-sm">Expert Consultants</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 section-bg-navy text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-white mb-4">Client Success Stories</h2>
+                <p class="text-xl text-gray-300">Hear from businesses we've helped establish in the UAE.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-14 h-14 bg-navy-900 rounded-full flex items-center justify-center text-gold-500 font-bold text-xl mr-4">
+                            JK</div>
+                        <div>
+                            <h4 class="font-bold text-navy-900">James K.</h4>
+                            <p class="text-gray-500 text-sm">Tech Startup Founder</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Diplomate made setting up our Dubai office seamless. Their
+                        expertise saved us weeks of paperwork and confusion. Highly recommended!"</p>
+                    <div class="flex text-gold-500 mt-4">★★★★★</div>
+                </div>
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-14 h-14 bg-navy-900 rounded-full flex items-center justify-center text-gold-500 font-bold text-xl mr-4">
+                            SA</div>
+                        <div>
+                            <h4 class="font-bold text-navy-900">Sarah A.</h4>
+                            <p class="text-gray-500 text-sm">E-commerce Business Owner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"From license to visa to bank account - they handled everything
+                        professionally. Their team is always responsive and knowledgeable."</p>
+                    <div class="flex text-gold-500 mt-4">★★★★★</div>
+                </div>
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-14 h-14 bg-navy-900 rounded-full flex items-center justify-center text-gold-500 font-bold text-xl mr-4">
+                            MR</div>
+                        <div>
+                            <h4 class="font-bold text-navy-900">Mohammed R.</h4>
+                            <p class="text-gray-500 text-sm">Consulting Firm Director</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Excellent service and fair pricing. The team went above and beyond
+                        to ensure our company formation was completed swiftly."</p>
+                    <div class="flex text-gold-500 mt-4">★★★★★</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="py-24 section-bg-slate text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-white mb-4">Related Services</h2>
+                <p class="text-xl text-gray-300">Explore more ways we can help your business thrive in the UAE.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <a href="freezone-setup.html"
+                    class="group bg-white rounded-3xl p-8 border border-gray-200 hover:border-indigo-700 transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div
+                        class="w-14 h-14 bg-indigo-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-700 transition-colors">
+                        <svg class="w-7 h-7 text-indigo-700 group-hover:text-white transition-colors" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                                stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Free Zone Setup</h3>
+                    <p class="text-gray-600 mb-4">100% foreign ownership and tax benefits in premier UAE free zones.</p>
+                    <span class="text-indigo-700 font-bold group-hover:underline">Learn More →</span>
+                </a>
+                <a href="visa-services.html"
+                    class="group bg-white rounded-3xl p-8 border border-gray-200 hover:border-indigo-700 transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div
+                        class="w-14 h-14 bg-indigo-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-700 transition-colors">
+                        <svg class="w-7 h-7 text-indigo-700 group-hover:text-white transition-colors" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"
+                                stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Visa Services</h3>
+                    <p class="text-gray-600 mb-4">Residence visas, family sponsorship, and Golden Visa processing.</p>
+                    <span class="text-indigo-700 font-bold group-hover:underline">Learn More →</span>
+                </a>
+                <a href="accounting-tax.html"
+                    class="group bg-white rounded-3xl p-8 border border-gray-200 hover:border-indigo-700 transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div
+                        class="w-14 h-14 bg-indigo-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-700 transition-colors">
+                        <svg class="w-7 h-7 text-indigo-700 group-hover:text-white transition-colors" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Accounting & VAT</h3>
+                    <p class="text-gray-600 mb-4">Professional bookkeeping, VAT registration, and tax compliance.</p>
+                    <span class="text-indigo-700 font-bold group-hover:underline">Learn More →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-white">
+        <!-- Footer Content -->
+        <div class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-4 gap-12 border-b border-gray-800 pb-12 mb-12">
+                    <!-- Company Info -->
+                    <div class="col-span-2">
+                        <a href="index.html" class="mb-6 block">
+                            <img src="assets/images/logo/logo.png" alt="Diplomat Documents Services"
+                                class="h-20 w-auto ">
+                        </a>
+                        <p class="text-gray-400 max-w-md mb-6">
+                            Diplomate is Dubai's leading corporate services provider, dedicated to helping global
+                            entrepreneurs establish and grow their business legacy in the UAE.
+                        </p>
+                        <!-- Address -->
+                        <div class="bg-gray-800/50 rounded-2xl p-6 border border-gray-700">
+                            <h5 class="text-gold-500 font-bold text-sm uppercase tracking-widest mb-4">📍 Our Office
+                            </h5>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                <strong>DIPLOMAT DOCUMENTS SERVICES</strong><br>
+                                Office No: 305, Coastal Building<br>
+                                Near Sharjah Islamic Bank, Al Tawar-2<br>
+                                Dubai - UAE
+                            </p>
+                            <p class="text-gold-500 font-bold mt-4">
+                                <a href="tel:+97143262732" class="hover:text-white transition-colors">📞 04 326 2732</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+                        <h5 class="text-lg font-bold mb-6">Quick Links</h5>
+                        <ul class="space-y-4 text-gray-400">
+                            <li><a href="about.html" class="hover:text-gold-500 transition-colors">About Us</a></li>
+                            <li><a href="services.html" class="hover:text-gold-500 transition-colors">Services</a></li>
+                            <li><a href="contact.html" class="hover:text-gold-500 transition-colors">Contact Us</a></li>
+                            <li><a href="guides.html" class="hover:text-gold-500 transition-colors">Setup Guides</a>
+                            </li>
+                            <li><a href="freezone-setup.html" class="hover:text-gold-500 transition-colors">Free Zone
+                                    Setup</a></li>
+                            <li><a href="mainland-setup.html" class="hover:text-gold-500 transition-colors">Mainland
+                                    Setup</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Connect With Us + Map -->
+                    <div>
+                        <h5 class="text-lg font-bold mb-6">Connect With Us</h5>
+                        <div class="flex space-x-4 mb-6">
+                            <a href="https://wa.me/971508878699" target="_blank"
+                                class="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                                <span class="sr-only">WhatsApp</span>
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.431 5.63 1.434h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                                </svg>
+                            </a>
+                            <a href="tel:+97143262732"
+                                class="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-600 to-indigo-700 flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                                <span class="sr-only">Phone</span>
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <a href="mailto:info@diplomate.ae"
+                                class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center hover:scale-110 transition-transform shadow-lg text-navy-900">
+                                <span class="sr-only">Email</span>
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+                        <a href="https://www.google.com/maps/place/25%C2%B015'52.3%22N+55%C2%B023'06.0%22E"
+                            target="_blank"
+                            class="inline-flex items-center text-sm text-indigo-400 hover:text-gold-500 transition-colors mb-4">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                    stroke-width="2" />
+                                <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-width="2" />
+                            </svg>
+                            Open in Google Maps
+                        </a>
+                        <!-- Small Map Card -->
+                        <div class="map-card-small">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.7!2d55.382805!3d25.2645402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDE1JzUyLjMiTiA1NcKwMjMnMDYuMCJF!5e0!3m2!1sen!2sae!4v1704000000000"
+                                class="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-500"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-center text-gray-500 text-sm">
+                    &copy; 2025 Diplomat Documents Services. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
