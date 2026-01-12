@@ -414,16 +414,7 @@
     <!-- Navbar script for mobile -->
     <script>
         // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('py-2', 'shadow-lg');
-                navbar.classList.remove('py-4');
-            } else {
-                navbar.classList.add('py-4');
-                navbar.classList.remove('py-2', 'shadow-lg');
-            }
-        });
+        // Removed redundant inline scroll listener
 
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -869,7 +860,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260112"></script>
 </body>
 
 </html>
