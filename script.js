@@ -1,5 +1,5 @@
 /**
- * Diplomate - Business Consultancy Logic
+ * Diplomat - Business Consultancy Logic
  * Handles Sticky Navbar, Mobile Menu, and Cost Calculator
  */
 

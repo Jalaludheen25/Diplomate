@@ -1,1 +1,1 @@
-# Diplomate
+# Diplomat
