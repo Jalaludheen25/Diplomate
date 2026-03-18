@@ -1,6 +1,6 @@
 import os
 
-directory = '/Users/jalaludheenok/development/Diplomate'
+directory = '/Users/jalaludheenok/development/Diplomat'
 
 # Same replacements as before but applied to all HTML files
 replacements = [

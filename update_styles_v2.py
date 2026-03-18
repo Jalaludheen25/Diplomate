@@ -1,6 +1,6 @@
 import os
 
-directory = '/Users/jalaludheenok/development/Diplomate'
+directory = '/Users/jalaludheenok/development/Diplomat'
 
 # The main missing piece is the header background color which might have varied formatting.
 # We will globally replace the blue color code with the black color code.

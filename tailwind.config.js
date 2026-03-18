@@ -7,9 +7,6 @@ module.exports = {
                 navy: {
                     900: '#0f172a',
                 },
-                indigo: {
-                    700: '#4338ca',
-                },
                 gold: {
                     500: '#d4af37',
                 },

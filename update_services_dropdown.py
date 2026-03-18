@@ -1,6 +1,6 @@
 import os
 
-directory = '/Users/jalaludheenok/development/Diplomate'
+directory = '/Users/jalaludheenok/development/Diplomat'
 
 # Replacements specific to services.html or any file using 'brand-card' for dropdowns
 replacements = [

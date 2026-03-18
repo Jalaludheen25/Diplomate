@@ -1,6 +1,6 @@
 import os
 
-filepath = '/Users/jalaludheenok/development/Diplomate/index.html'
+filepath = '/Users/jalaludheenok/development/Diplomat/index.html'
 
 replacements = [
     # 1. Update Dropdown Containers (Business Setup & Services)
@@ -31,7 +31,7 @@ replacements = [
     # In Services/Business Setup, there are headings.
     # Current: h4 class="text-gold-500 ..." -> Keep Gold for hierarchy.
     
-    # 4. Update "Hey, we're Diplomate" text color if needed.
+    # 4. Update "Hey, we're Diplomat" text color if needed.
     # It has text-white, which is fine on dark background.
     
     # 5. Update "Explore All Solutions" button if needed.

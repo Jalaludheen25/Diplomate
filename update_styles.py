@@ -1,6 +1,6 @@
 import os
 
-directory = '/Users/jalaludheenok/development/Diplomate'
+directory = '/Users/jalaludheenok/development/Diplomat'
 
 replacements = [
     # 1. Header Background

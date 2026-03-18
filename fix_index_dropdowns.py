@@ -3,7 +3,7 @@ import os
 # index.html uses 'brand-card' for dropdowns, unlike others which were updated to bg-[#1a1a1a]/95 then /80.
 # We need to replace 'brand-card' with 'bg-[#1a1a1a]/80' and 'backdrop-blur-sm' in index.html specifically for dropdowns.
 
-filepath = '/Users/jalaludheenok/development/Diplomate/index.html'
+filepath = '/Users/jalaludheenok/development/Diplomat/index.html'
 
 replacements = [
     # Dropdown container in index.html (About Us, Contacts, Business Setup)
