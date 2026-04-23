@@ -3339,3 +3339,81 @@ input:focus {
     line-height: 1;
   }
 }
+/* ============================================
+   LUMINOUS GRID — Comprehensive Services
+   ============================================ */
+.cs-orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.12;pointer-events:none;animation:cs-orb-float 12s ease-in-out infinite alternate}
+.cs-orb--1{width:500px;height:500px;background:linear-gradient(135deg,#6366f1,#8b5cf6);top:-10%;left:-5%;animation-delay:0s}
+.cs-orb--2{width:400px;height:400px;background:linear-gradient(135deg,#d4af37,#f59e0b);bottom:-8%;right:-3%;animation-delay:-4s}
+.cs-orb--3{width:300px;height:300px;background:linear-gradient(135deg,#06b6d4,#3b82f6);top:40%;left:50%;animation-delay:-8s}
+@keyframes cs-orb-float{0%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-20px) scale(1.08)}100%{transform:translate(-20px,15px) scale(.95)}}
+
+.cs-card{position:relative;border-radius:1.5rem;padding:0;background:transparent;transition:transform .6s cubic-bezier(.23,1,.32,1);will-change:transform;transform-style:preserve-3d;perspective:1000px;opacity:0;transform:translateY(60px) rotateX(-15deg)}
+.cs-card::before{content:'';position:absolute;inset:-2px;border-radius:1.5rem;padding:2px;background:conic-gradient(from var(--gradient-angle,0deg),var(--card-accent,#6366f1),var(--card-accent-alt,#8b5cf6),var(--card-accent,#6366f1));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .5s ease;pointer-events:none;animation:rotate-gradient 4s linear infinite}
+@keyframes rotate-gradient{0%{--gradient-angle:0deg}100%{--gradient-angle:360deg}}
+@property --gradient-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cs-card:hover::before{opacity:1}
+.cs-card:hover{transform:translateY(-12px) rotateX(2deg) scale(1.02);filter:drop-shadow(0 25px 50px var(--card-glow))}
+.cs-card.is-visible{animation:cs-card-in .8s cubic-bezier(.23,1,.32,1) forwards}
+@keyframes cs-card-in{0%{opacity:0;transform:translateY(60px) rotateX(-15deg) scale(.95)}100%{opacity:1;transform:translateY(0) rotateX(0deg) scale(1)}}
+
+.cs-card__inner{background:linear-gradient(135deg,rgba(15,23,42,.7) 0%,rgba(30,41,59,.8) 50%,rgba(15,23,42,.9) 100%);backdrop-filter:blur(30px) saturate(180%);-webkit-backdrop-filter:blur(30px) saturate(180%);border-radius:1.5rem;border:1px solid rgba(255,255,255,.1);padding:2.5rem 2rem;height:100%;display:flex;flex-direction:column;position:relative;overflow:hidden;box-shadow:inset 0 1px 0 0 rgba(255,255,255,.1),0 10px 30px -10px rgba(0,0,0,.3);transition:all .5s cubic-bezier(.23,1,.32,1)}
+.cs-card__inner::after{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 20% 30%,var(--card-glow) 0%,transparent 50%),radial-gradient(circle at 80% 70%,var(--card-accent-alt) 0%,transparent 50%),radial-gradient(circle at 50% 50%,var(--card-accent) 0%,transparent 60%);opacity:.15;pointer-events:none;transition:opacity .6s ease,transform .6s ease;animation:mesh-float 8s ease-in-out infinite}
+@keyframes mesh-float{0%,100%{transform:translate(0,0) rotate(0deg)}33%{transform:translate(10px,-10px) rotate(5deg)}66%{transform:translate(-10px,10px) rotate(-5deg)}}
+.cs-card:hover .cs-card__inner::after{opacity:.3;transform:scale(1.1)}
+
+.cs-badge{display:inline-flex;align-items:center;gap:.625rem;font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.9);background:linear-gradient(135deg,var(--card-accent),var(--card-accent-alt));padding:.5rem 1rem;border-radius:2rem;margin-bottom:1.5rem;position:relative;z-index:2;box-shadow:0 4px 15px -3px var(--card-glow);transition:transform .3s ease,box-shadow .3s ease}
+.cs-card:hover .cs-badge{transform:translateY(-2px);box-shadow:0 6px 20px -3px var(--card-glow)}
+.cs-badge__num{display:inline-flex;align-items:center;justify-content:center;width:1.75rem;height:1.75rem;border-radius:50%;background:rgba(255,255,255,.25);backdrop-filter:blur(10px);color:#fff;font-size:.7rem;font-weight:900;box-shadow:inset 0 2px 4px rgba(0,0,0,.1)}
+
+.cs-icon{width:4rem;height:4rem;border-radius:1.25rem;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--card-accent),var(--card-accent-alt));color:#fff;margin-bottom:1.5rem;position:relative;z-index:2;box-shadow:0 10px 30px -10px var(--card-glow),inset 0 1px 0 rgba(255,255,255,.3);transition:all .5s cubic-bezier(.23,1,.32,1);animation:icon-float 3s ease-in-out infinite}
+@keyframes icon-float{0%,100%{transform:translateY(0px)}50%{transform:translateY(-8px)}}
+.cs-card:hover .cs-icon{transform:scale(1.15) rotate(5deg) translateY(-5px);box-shadow:0 20px 40px -10px var(--card-glow),inset 0 1px 0 rgba(255,255,255,.4);animation:none}
+.cs-icon svg{width:1.75rem;height:1.75rem;filter:drop-shadow(0 2px 4px rgba(0,0,0,.2))}
+
+.cs-title{font-family:'Outfit',sans-serif;font-size:1.35rem;font-weight:700;background:linear-gradient(135deg,#fff 0%,rgba(255,255,255,.8) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1rem;position:relative;z-index:2;transition:all .3s ease;line-height:1.3}
+.cs-card:hover .cs-title{background:linear-gradient(135deg,var(--card-accent) 0%,var(--card-accent-alt) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;transform:translateX(4px)}
+.cs-title a{color:inherit;text-decoration:none;background:inherit;-webkit-background-clip:text;background-clip:text}
+
+.cs-list{list-style:none;padding:0;margin:0;position:relative;z-index:2;flex:1}
+.cs-list li{display:flex;align-items:flex-start;gap:.75rem;padding:.5rem 0;font-size:.85rem;line-height:1.6;color:rgba(255,255,255,.6);transition:all .3s cubic-bezier(.23,1,.32,1);position:relative}
+.cs-list li::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:0;height:2px;background:linear-gradient(90deg,var(--card-accent),transparent);transition:width .4s cubic-bezier(.23,1,.32,1);opacity:0}
+.cs-list li:hover::before{width:100%;opacity:.3}
+.cs-list li:hover{color:rgba(255,255,255,.95);transform:translateX(8px);padding-left:.5rem}
+.cs-list li a{color:inherit;text-decoration:none;transition:color .25s ease;position:relative;z-index:1}
+.cs-list li a:hover{color:var(--card-accent)}
+
+.cs-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--card-accent);margin-top:.5rem;flex-shrink:0;position:relative;transition:all .3s ease}
+.cs-dot::after{content:'';position:absolute;inset:-3px;border-radius:50%;border:2px solid var(--card-accent);opacity:0;transition:all .3s ease}
+.cs-list li:hover .cs-dot{background:var(--card-accent-alt);box-shadow:0 0 12px 3px var(--card-glow);transform:scale(1.3)}
+.cs-list li:hover .cs-dot::after{opacity:.5;inset:-6px}
+
+.cs-extra{max-height:0;overflow:hidden;opacity:0;transition:max-height .5s cubic-bezier(.23,1,.32,1),opacity .4s ease}
+.cs-extra.is-open{opacity:1}
+
+.cs-toggle{display:inline-flex;align-items:center;gap:.5rem;margin-top:1rem;font-size:.8rem;font-weight:700;color:var(--card-accent);cursor:pointer;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:2rem;padding:.625rem 1.25rem;position:relative;z-index:2;transition:all .3s cubic-bezier(.23,1,.32,1);backdrop-filter:blur(10px)}
+.cs-toggle:hover{background:rgba(255,255,255,.1);border-color:var(--card-accent);color:#fff;gap:.75rem;transform:translateY(-2px);box-shadow:0 4px 15px -3px var(--card-glow)}
+.cs-toggle svg{width:1rem;height:1rem;transition:transform .4s cubic-bezier(.23,1,.32,1)}
+.cs-toggle.is-open svg{transform:rotate(180deg)}
+
+.cs-cta-card{position:relative;border-radius:1.5rem;background:linear-gradient(135deg,rgba(212,175,55,.15) 0%,rgba(212,175,55,.05) 100%);backdrop-filter:blur(30px);border:2px solid rgba(212,175,55,.3);padding:2.5rem 2rem;display:flex;flex-direction:column;cursor:pointer;transition:all .6s cubic-bezier(.23,1,.32,1);overflow:hidden;opacity:0;transform:translateY(60px) rotateX(-15deg);box-shadow:0 10px 30px -10px rgba(212,175,55,.2),inset 0 1px 0 rgba(255,255,255,.1)}
+.cs-cta-card.is-visible{animation:cs-card-in .8s cubic-bezier(.23,1,.32,1) forwards}
+.cs-cta-card::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 40%,rgba(212,175,55,.2),transparent 50%),radial-gradient(circle at 70% 60%,rgba(245,158,11,.15),transparent 50%);pointer-events:none;transition:all .6s ease;opacity:.5;animation:mesh-float 10s ease-in-out infinite}
+.cs-cta-card:hover{transform:translateY(-15px) scale(1.03);box-shadow:0 30px 60px -15px rgba(212,175,55,.4),inset 0 1px 0 rgba(255,255,255,.2);border-color:rgba(212,175,55,.6)}
+.cs-cta-card:hover::before{opacity:1;transform:scale(1.1) rotate(10deg)}
+
+.cs-header-line{width:0;height:4px;border-radius:2px;background:linear-gradient(90deg,#d4af37,#f59e0b,#d4af37);box-shadow:0 0 20px rgba(212,175,55,.5);transition:width 1.4s cubic-bezier(.23,1,.32,1);margin:0 auto}
+.cs-header-line.is-visible{width:8rem}
+
+.cs-card--indigo{--card-accent:#6366f1;--card-accent-alt:#818cf8;--card-glow:rgba(99,102,241,.4)}
+.cs-card--emerald{--card-accent:#10b981;--card-accent-alt:#34d399;--card-glow:rgba(16,185,129,.4)}
+.cs-card--violet{--card-accent:#8b5cf6;--card-accent-alt:#a78bfa;--card-glow:rgba(139,92,246,.4)}
+.cs-card--amber{--card-accent:#f59e0b;--card-accent-alt:#fbbf24;--card-glow:rgba(245,158,11,.4)}
+.cs-card--rose{--card-accent:#f43f5e;--card-accent-alt:#fb7185;--card-glow:rgba(244,63,94,.4)}
+.cs-card--cyan{--card-accent:#06b6d4;--card-accent-alt:#22d3ee;--card-glow:rgba(6,182,212,.4)}
+.cs-card--teal{--card-accent:#14b8a6;--card-accent-alt:#2dd4bf;--card-glow:rgba(20,184,166,.4)}
+
+@media(min-width:768px){.cs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.75rem}}
+@media(min-width:1024px){.cs-grid{grid-template-columns:repeat(4,1fr);gap:2rem}}
+@media(max-width:767px){.cs-grid{display:flex;flex-direction:column;gap:1.25rem}.cs-card__inner{padding:2rem 1.5rem}.cs-icon{width:3.5rem;height:3.5rem}.cs-title{font-size:1.2rem}}
+
