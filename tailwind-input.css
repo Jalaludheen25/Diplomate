@@ -618,3 +618,240 @@ input:focus {
         font-size: 1.2rem;
     }
 }
+
+/* ============================================
+   SECTORS WE EMPOWER - Modern Card Design
+   ============================================ */
+
+.sector-card {
+    position: relative;
+    background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
+    backdrop-filter: blur(20px);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 
+        0 10px 30px -10px rgba(0,0,0,0.1),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+    transition: all 0.5s cubic-bezier(0.23,1,0.32,1);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.sector-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--sector-color, #6366f1) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.sector-card:hover::before {
+    opacity: 0.08;
+}
+
+.sector-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 
+        0 20px 50px -15px rgba(0,0,0,0.2),
+        inset 0 1px 0 rgba(255,255,255,1);
+    border-color: var(--sector-color, #6366f1);
+}
+
+/* Sector Icon Container */
+.sector-icon {
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--sector-color, #6366f1), var(--sector-color-alt, #8b5cf6));
+    margin-bottom: 1.5rem;
+    transition: all 0.5s cubic-bezier(0.23,1,0.32,1);
+    box-shadow: 0 8px 20px -8px var(--sector-glow, rgba(99,102,241,0.4));
+}
+
+.sector-icon svg {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    transition: transform 0.5s cubic-bezier(0.23,1,0.32,1);
+}
+
+.sector-card:hover .sector-icon {
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 15px 35px -10px var(--sector-glow, rgba(99,102,241,0.6));
+}
+
+.sector-card:hover .sector-icon svg {
+    transform: scale(1.1);
+}
+
+/* Animated gradient border on hover */
+.sector-card::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 1.5rem;
+    padding: 2px;
+    background: linear-gradient(135deg, var(--sector-color, #6366f1), var(--sector-color-alt, #8b5cf6));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.sector-card:hover::after {
+    opacity: 0.6;
+}
+
+/* Sector Title */
+.sector-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.sector-card:hover .sector-title {
+    color: var(--sector-color, #6366f1);
+    transform: translateX(4px);
+}
+
+/* Sector Description */
+.sector-desc {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.sector-card:hover .sector-desc {
+    color: #475569;
+}
+
+/* Floating particles effect */
+.sector-card .sector-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--sector-color, #6366f1);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.sector-card:hover .sector-particle {
+    opacity: 0.3;
+    animation: particle-float 3s ease-in-out infinite;
+}
+
+@keyframes particle-float {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(10px, -10px); }
+    50% { transform: translate(-5px, -20px); }
+    75% { transform: translate(5px, -15px); }
+}
+
+/* Color variants for each sector */
+.sector-fintech {
+    --sector-color: #10b981;
+    --sector-color-alt: #34d399;
+    --sector-glow: rgba(16,185,129,0.4);
+}
+
+.sector-ecommerce {
+    --sector-color: #f59e0b;
+    --sector-color-alt: #fbbf24;
+    --sector-glow: rgba(245,158,11,0.4);
+}
+
+.sector-consultancy {
+    --sector-color: #8b5cf6;
+    --sector-color-alt: #a78bfa;
+    --sector-glow: rgba(139,92,246,0.4);
+}
+
+.sector-realestate {
+    --sector-color: #06b6d4;
+    --sector-color-alt: #22d3ee;
+    --sector-glow: rgba(6,182,212,0.4);
+}
+
+.sector-tech {
+    --sector-color: #6366f1;
+    --sector-color-alt: #818cf8;
+    --sector-glow: rgba(99,102,241,0.4);
+}
+
+.sector-healthcare {
+    --sector-color: #ec4899;
+    --sector-color-alt: #f472b6;
+    --sector-glow: rgba(236,72,153,0.4);
+}
+
+.sector-education {
+    --sector-color: #f43f5e;
+    --sector-color-alt: #fb7185;
+    --sector-glow: rgba(244,63,94,0.4);
+}
+
+.sector-trade {
+    --sector-color: #14b8a6;
+    --sector-color-alt: #2dd4bf;
+    --sector-glow: rgba(20,184,166,0.4);
+}
+
+/* Stagger animation on scroll */
+.sector-card {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.sector-card.is-visible {
+    animation: sector-fade-in 0.6s cubic-bezier(0.23,1,0.32,1) forwards;
+}
+
+@keyframes sector-fade-in {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sector-card {
+        padding: 1.5rem;
+    }
+    
+    .sector-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    
+    .sector-icon svg {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+    
+    .sector-title {
+        font-size: 1.1rem;
+    }
+}

@@ -851,6 +851,23 @@
                     }
                 });
             });
+
+            // Sector Cards Animation
+            var sectorCards = document.querySelectorAll('.sector-card');
+            var sectorObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry, index) {
+                    if (entry.isIntersecting) {
+                        var cardIndex = Array.from(sectorCards).indexOf(entry.target);
+                        setTimeout(function() {
+                            entry.target.classList.add('is-visible');
+                        }, cardIndex * 80);
+                        sectorObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+            sectorCards.forEach(function(card) { 
+                sectorObserver.observe(card); 
+            });
         });
         </script>
     </section>
@@ -926,92 +943,115 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="sector-card-dark p-8 rounded-2xl">
-                    <div class="sector-icon mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- FinTech -->
+                <div class="sector-card sector-fintech">
+                    <span class="sector-particle" style="top: 20%; left: 80%;"></span>
+                    <div class="sector-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path
                                 d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <h4 class="text-lg font-bold sector-title mb-2">FinTech</h4>
-                    <p class="sector-desc text-sm">Regulatory licensing for modern financial platforms.</p>
+                    <h4 class="sector-title">FinTech</h4>
+                    <p class="sector-desc">Regulatory licensing for modern financial platforms and digital payment solutions.</p>
                 </div>
-                <div class="sector-card-dark p-8 rounded-2xl">
-                    <div class="sector-icon mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                <!-- E-Commerce -->
+                <div class="sector-card sector-ecommerce">
+                    <span class="sector-particle" style="top: 30%; left: 70%;"></span>
+                    <div class="sector-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <h4 class="text-lg font-bold sector-title mb-2">E-Commerce</h4>
-                    <p class="sector-desc text-sm">Scalable structures for retail and digital marketplaces.</p>
+                    <h4 class="sector-title">E-Commerce</h4>
+                    <p class="sector-desc">Scalable structures for retail and digital marketplaces with full compliance.</p>
                 </div>
-                <div class="sector-card-dark p-8 rounded-2xl">
-                    <div class="sector-icon mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                <!-- Consultancy -->
+                <div class="sector-card sector-consultancy">
+                    <span class="sector-particle" style="top: 25%; left: 75%;"></span>
+                    <div class="sector-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path
                                 d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <h4 class="text-lg font-bold sector-title mb-2">Consultancy</h4>
-                    <p class="sector-desc text-sm">Professional services licenses for global experts.</p>
+                    <h4 class="sector-title">Consultancy</h4>
+                    <p class="sector-desc">Professional services licenses for global experts and advisory firms.</p>
                 </div>
-                <div class="sector-card-dark p-8 rounded-2xl">
-                    <div class="sector-icon mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                <!-- Real Estate -->
+                <div class="sector-card sector-realestate">
+                    <span class="sector-particle" style="top: 35%; left: 65%;"></span>
+                    <div class="sector-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path
                                 d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <h4 class="text-lg font-bold sector-title mb-2">Real Estate</h4>
-                    <p class="sector-desc text-sm">Property management and brokerage establishment.</p>
+                    <h4 class="sector-title">Real Estate</h4>
+                    <p class="sector-desc">Property management and brokerage establishment with full legal support.</p>
                 </div>
-                <div class="sector-card-dark p-8 rounded-2xl">
-                    <div class="sector-icon mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                <!-- IT & Tech -->
+                <div class="sector-card sector-tech">
+                    <span class="sector-particle" style="top: 28%; left: 72%;"></span>
+                    <div class="sector-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path
                                 d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <h4 class="text-lg font-bold sector-title mb-2">IT & Tech</h4>
-                    <p class="sector-desc text-sm">Software development and tech startup licensing.</p>
+                    <h4 class="sector-title">IT & Tech</h4>
+                    <p class="sector-desc">Software development and tech startup licensing with innovation focus.</p>
                 </div>
-                <div class="sector-card-dark p-8 rounded-2xl">
-                    <div class="sector-icon mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                <!-- Healthcare -->
+                <div class="sector-card sector-healthcare">
+                    <span class="sector-particle" style="top: 22%; left: 78%;"></span>
+                    <div class="sector-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path
                                 d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <h4 class="text-lg font-bold sector-title mb-2">Healthcare</h4>
-                    <p class="sector-desc text-sm">Medical practice and healthcare facility licensing.</p>
+                    <h4 class="sector-title">Healthcare</h4>
+                    <p class="sector-desc">Medical practice and healthcare facility licensing with regulatory guidance.</p>
                 </div>
-                <div class="sector-card-dark p-8 rounded-2xl">
-                    <div class="sector-icon mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                <!-- Education -->
+                <div class="sector-card sector-education">
+                    <span class="sector-particle" style="top: 32%; left: 68%;"></span>
+                    <div class="sector-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <h4 class="text-lg font-bold sector-title mb-2">Education</h4>
-                    <p class="sector-desc text-sm">Training centers and educational institutions.</p>
+                    <h4 class="sector-title">Education</h4>
+                    <p class="sector-desc">Training centers and educational institutions with accreditation support.</p>
                 </div>
-                <div class="sector-card-dark p-8 rounded-2xl">
-                    <div class="sector-icon mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                <!-- Import/Export -->
+                <div class="sector-card sector-trade">
+                    <span class="sector-particle" style="top: 26%; left: 74%;"></span>
+                    <div class="sector-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path
                                 d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <h4 class="text-lg font-bold sector-title mb-2">Import/Export</h4>
-                    <p class="sector-desc text-sm">Trading licenses and logistics operations.</p>
+                    <h4 class="sector-title">Import/Export</h4>
+                    <p class="sector-desc">Trading licenses and logistics operations with customs facilitation.</p>
                 </div>
             </div>
         </div>
