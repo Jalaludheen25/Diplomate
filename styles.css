@@ -3446,3 +3446,173 @@ input:focus {
 .sector-card.is-visible{animation:sector-fade-in .6s cubic-bezier(.23,1,.32,1) forwards}
 @keyframes sector-fade-in{to{opacity:1;transform:translateY(0)}}
 @media(max-width:768px){.sector-card{padding:1.5rem}.sector-icon{width:3.5rem;height:3.5rem}.sector-icon svg{width:1.75rem;height:1.75rem}.sector-title{font-size:1.1rem}}
+
+/* Luminous Grid Slider Styles */
+.cs-slider-viewport {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 2.5rem 0;
+    perspective: 1200px;
+}
+.cs-slider-track {
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+    padding: 1rem 0;
+    transform-style: preserve-3d;
+}
+.cs-slider-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease;
+    opacity: 0.8;
+    transform-style: preserve-3d;
+}
+@media (min-width: 768px) {
+    .cs-slider-item {
+        flex: 0 0 380px;
+        max-width: 380px;
+    }
+}
+.cs-slider-item.is-active {
+    opacity: 1;
+    z-index: 10;
+}
+.cs-slider-item.is-active .cs-card,
+.cs-slider-item.is-active .cs-cta-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Cards Color Pop & Details Styling */
+.cs-card--indigo .cs-card__inner {
+    background: linear-gradient(135deg, #120e2e 0%, #1a154d 50%, #2f2585 100%);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+.cs-card--emerald .cs-card__inner {
+    background: linear-gradient(135deg, #011d15 0%, #043828 50%, #0c7553 100%);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+.cs-card--violet .cs-card__inner {
+    background: linear-gradient(135deg, #1c0a3a 0%, #2c125c 50%, #582aab 100%);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+.cs-card--amber .cs-card__inner {
+    background: linear-gradient(135deg, #2b1002 0%, #471d05 50%, #9c5005 100%);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+.cs-card--rose .cs-card__inner {
+    background: linear-gradient(135deg, #30030e 0%, #54061a 50%, #a81036 100%);
+    border: 1px solid rgba(244, 63, 94, 0.3);
+}
+.cs-card--cyan .cs-card__inner {
+    background: linear-gradient(135deg, #031e2b 0%, #06384f 50%, #08709e 100%);
+    border: 1px solid rgba(6, 182, 212, 0.3);
+}
+.cs-card--teal .cs-card__inner {
+    background: linear-gradient(135deg, #011d1c 0%, #053b39 50%, #0b7a76 100%);
+    border: 1px solid rgba(20, 184, 166, 0.3);
+}
+.cs-cta-card {
+    background: linear-gradient(135deg, #0f121d 0%, #151b2d 50%, #d4af37 100%) !important;
+    border: 1px solid rgba(212, 175, 55, 0.3) !important;
+}
+
+/* Card Content Text Adaptations for Dark Colored Backgrounds */
+.cs-card--indigo .cs-title,
+.cs-card--emerald .cs-title,
+.cs-card--violet .cs-title,
+.cs-card--amber .cs-title,
+.cs-card--rose .cs-title,
+.cs-card--cyan .cs-title,
+.cs-card--teal .cs-title {
+    color: #ffffff !important;
+}
+.cs-card--indigo .cs-list li,
+.cs-card--emerald .cs-list li,
+.cs-card--violet .cs-list li,
+.cs-card--amber .cs-list li,
+.cs-card--rose .cs-list li,
+.cs-card--cyan .cs-list li,
+.cs-card--teal .cs-list li {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+.cs-card--indigo .cs-list li a,
+.cs-card--emerald .cs-list li a,
+.cs-card--violet .cs-list li a,
+.cs-card--amber .cs-list li a,
+.cs-card--rose .cs-list li a,
+.cs-card--cyan .cs-list li a,
+.cs-card--teal .cs-list li a {
+    color: rgba(255, 255, 255, 0.85) !important;
+    transition: color 0.3s ease;
+}
+.cs-card--indigo .cs-list li a:hover,
+.cs-card--emerald .cs-list li a:hover,
+.cs-card--violet .cs-list li a:hover,
+.cs-card--amber .cs-list li a:hover,
+.cs-card--rose .cs-list li a:hover,
+.cs-card--cyan .cs-list li a:hover,
+.cs-card--teal .cs-list li a:hover {
+    color: #d4af37 !important; /* Gold on hover */
+}
+.cs-card--indigo .cs-dot,
+.cs-card--emerald .cs-dot,
+.cs-card--violet .cs-dot,
+.cs-card--amber .cs-dot,
+.cs-card--rose .cs-dot,
+.cs-card--cyan .cs-dot,
+.cs-card--teal .cs-dot {
+    background: #ffffff !important;
+}
+.cs-card:hover .cs-dot {
+    background: #d4af37 !important;
+    box-shadow: 0 0 12px 3px rgba(212, 175, 55, 0.6) !important;
+}
+
+/* Modern Sleek Buttons Styles */
+.cs-toggle {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    color: #ffffff !important;
+    border-radius: 2rem !important;
+    padding: 0.625rem 1.5rem !important;
+    font-weight: 600 !important;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+.cs-toggle:hover {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border-color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 20px -5px rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Modern Slider Arrows Style */
+#cs-prev, #cs-next {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    backdrop-filter: blur(12px);
+    border-radius: 50%;
+    width: 3.25rem;
+    height: 3.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+#cs-prev:hover, #cs-next:hover {
+    background: #d4af37;
+    border-color: #d4af37;
+    color: #0f172a;
+    transform: scale(1.12);
+    box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.4);
+}
+#cs-prev:active, #cs-next:active {
+    transform: scale(0.95);
+}
+
